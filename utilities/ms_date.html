@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+}
+</style>
+<script>
+function startTime() {
+    var today = new Date();
+    // var h = today.getHours();
+    // var m = today.getMinutes();
+    // var s = today.getSeconds();
+    // h = checkTime(h);
+    // m = checkTime(m);
+    // s = checkTime(s);
+    // document.getElementById('txt1').innerHTML =
+    //     h + ":" + m + ":" + s;
+    var y = today.getFullYear();
+    var mo = 1 + today.getMonth();
+    var d = today.getDate();
+    mo = checkDate(mo);
+    d = checkDate(d);
+    document.getElementById('txt2').innerHTML =
+        y + " . " + mo + " . " + d;
+    // document.getElementById('txt3').innerHTML =
+    //     "FMX_XP =";
+    // document.getElementById('txt4').innerHTML =
+    //     2;
+    var t = setTimeout(startTime, 500);
+}
+// add 0 in front of numbers less than 10
+// function checkTime(i) {
+//     if (i < 10) {i = "0" + i};
+//     return i;
+// }
+function checkDate(j) {
+    if (j < 10) {j = "0" + j};
+    return j;
+}
+</script>
+</head>
+
+<body onload="startTime()">
+
+<div id="txt2"></div>
+
+</body>
+</html>
