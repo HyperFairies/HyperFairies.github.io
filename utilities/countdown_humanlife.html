@@ -13,7 +13,7 @@
     function countdown() {
         var birthDate = new Date("June 26, 1978 21:03:00");
         var hundredthBirthday = new Date(birthDate.getTime());
-        hundredthBirthday.setFullYear(birthDate.getFullYear() + 100);
+        hundredthBirthday.setFullYear(birthDate.getFullYear() + 101);
 
         var x = setInterval(function() {
 
@@ -26,12 +26,12 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-            document.getElementById("txt1").innerHTML = "100 yo:&nbsp;&nbsp;" + years + " years, " + days + " days, " + hours + " hours, " 
+            document.getElementById("txt1").innerHTML = "101 yo:&nbsp;&nbsp;" + years + " years, " + days + " days, " + hours + " hours, " 
                                                           + minutes + " minutes, " + seconds + " seconds";
     
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("txt1").innerHTML = "Happy 100th Birthday!";
+                document.getElementById("txt1").innerHTML = "Happy 101th Birthday!";
             }
         }, 1000);
     }
