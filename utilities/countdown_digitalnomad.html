@@ -12,13 +12,13 @@
     <script>
     function countdown() {
         var birthDate = new Date("June 26, 1978 21:03:00");
-        var hundredthBirthday = new Date(birthDate.getTime());
-        hundredthBirthday.setFullYear(birthDate.getFullYear() + 66);
+        var birthday_67 = new Date(birthDate.getTime());
+        birthday_67.setFullYear(birthDate.getFullYear() + 67);
 
         var x = setInterval(function() {
 
             var now = new Date().getTime();
-            var distance = hundredthBirthday.getTime() - now;
+            var distance = birthday_67.getTime() - now;
     
             var years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365.25));
             var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24));
@@ -26,12 +26,12 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-            document.getElementById("txt1").innerHTML = "66 yo:&nbsp;&nbsp;" + years + " years, " + days + " days, " + hours + " hours, " 
+            document.getElementById("txt1").innerHTML = "67 yo:&nbsp;&nbsp;" + years + " years, " + days + " days, " + hours + " hours, " 
                                                           + minutes + " minutes, " + seconds + " seconds";
     
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("txt1").innerHTML = "It's your birthday and you're 66. You should be a digital nomad.";
+                document.getElementById("txt1").innerHTML = "It's your birthday and you're 67. You should be a digital nomad.";
             }
         }, 1000);
     }
