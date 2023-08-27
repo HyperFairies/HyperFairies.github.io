@@ -1,4 +1,4 @@
-// File: M1-01.js
+// File: M2-01.js
 
 "use strict";
 
