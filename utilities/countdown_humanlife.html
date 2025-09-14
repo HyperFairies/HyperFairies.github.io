@@ -12,13 +12,13 @@
     <script>
     function countdown() {
         var birthDate = new Date("June 26, 1978 21:03:00");
-        var birthday_102 = new Date(birthDate.getTime());
-        birthday_102.setFullYear(birthDate.getFullYear() + 102);
+        var birthday_110 = new Date(birthDate.getTime());
+        birthday_110.setFullYear(birthDate.getFullYear() + 110);
 
         var x = setInterval(function() {
 
             var now = new Date().getTime();
-            var distance = birthday_102.getTime() - now;
+            var distance = birthday_110.getTime() - now;
     
             var years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365.25));
             var days = Math.floor((distance % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24));
@@ -26,12 +26,12 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-            document.getElementById("txt1").innerHTML = "102 yo:&nbsp;&nbsp;" + years + " years, " + days + " days, " + hours + " hours, " 
+            document.getElementById("txt1").innerHTML = "110 yo:&nbsp;&nbsp;" + years + " years, " + days + " days, " + hours + " hours, " 
                                                           + minutes + " minutes, " + seconds + " seconds";
     
             if (distance < 0) {
                 clearInterval(x);
-                document.getElementById("txt1").innerHTML = "Reached 102.";
+                document.getElementById("txt1").innerHTML = "You've reached 110 years old.";
             }
         }, 1000);
     }
